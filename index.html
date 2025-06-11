@@ -48,7 +48,7 @@ transition: opacity 2s ease-in-out;
 opacity: 1;
 }
 
-/* Reduced overlay opacity to show more of the background */
+/* Darker overlay for better contrast */
 .background-slide::before {
 content: '';
 position: absolute;
@@ -56,7 +56,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgba(0, 0, 0, 0.15);
+background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
 z-index: 1;
 }
 
@@ -84,75 +84,73 @@ position: relative;
 z-index: 2;
 }
 
-/* Main header with enhanced transparency and readability */
+/* Enhanced main header with better contrast */
 .main-header {
 text-align: center;
 margin-bottom: 40px;
-padding: 40px 30px;
-background: rgba(255, 255, 255, 0.15);
-border-radius: 20px;
-backdrop-filter: blur(15px);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 50px 40px;
+background: rgba(255, 255, 255, 0.95);
+border-radius: 25px;
+backdrop-filter: blur(20px);
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .main-header h1 {
 font-family: 'Playfair Display', serif;
-font-size: 3rem;
+font-size: 3.5rem;
 font-weight: 700;
-color: #ffffff;
+color: #2c3e50;
 margin-bottom: 15px;
-text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+background: linear-gradient(135deg, #2c3e50, #34495e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
 }
 
 .main-header .date {
 font-family: 'Playfair Display', serif;
-font-size: 1.6rem;
-color: #ffffff;
-font-weight: 400;
+font-size: 1.8rem;
+color: #e74c3c;
+font-weight: 600;
 letter-spacing: 2px;
-margin-bottom: 20px;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+margin-bottom: 25px;
 }
 
 .location-info {
-margin-top: 20px;
-padding-top: 20px;
-border-top: 2px solid rgba(255, 255, 255, 0.4);
+margin-top: 25px;
+padding-top: 25px;
+border-top: 3px solid #e74c3c;
 }
 
 .location-info h3 {
 font-family: 'Playfair Display', serif;
 font-size: 1.4rem;
-color: #ffffff;
-margin-bottom: 10px;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+color: #2c3e50;
+margin-bottom: 12px;
 }
 
 .location-info .venue-name {
 font-size: 1.2rem;
 font-weight: 600;
-color: #ffffff;
-margin-bottom: 5px;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+color: #2c3e50;
+margin-bottom: 8px;
 }
 
 .location-info .address {
 font-size: 1rem;
-color: #ffffff;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+color: #34495e;
 }
 
 .location-info .address a {
-color: #4ecdc4;
+color: #e74c3c;
 text-decoration: none;
 font-weight: 600;
 transition: color 0.3s ease;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .location-info .address a:hover {
-color: #45b7aa;
+color: #c0392b;
 text-decoration: underline;
 }
 
@@ -164,32 +162,30 @@ gap: 30px;
 margin-bottom: 30px;
 }
 
-/* Enhanced transparency for sections */
+/* Improved sections with solid backgrounds */
 .section {
-padding: 30px;
-background: rgba(255, 255, 255, 0.1);
+padding: 35px;
+background: rgba(255, 255, 255, 0.95);
 border-radius: 20px;
 backdrop-filter: blur(15px);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-border: 1px solid rgba(255, 255, 255, 0.3);
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .section h3 {
 font-family: 'Playfair Display', serif;
-font-size: 1.6rem;
-color: #ffffff;
-margin-bottom: 20px;
+font-size: 1.8rem;
+color: #2c3e50;
+margin-bottom: 25px;
 text-align: center;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .section p {
-font-size: 1rem;
-color: #ffffff;
+font-size: 1.1rem;
+color: #34495e;
 text-align: center;
 font-weight: 400;
 margin-bottom: 15px;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* Schedule styling with better contrast */
@@ -202,26 +198,29 @@ gap: 15px;
 .schedule-item {
 display: flex;
 align-items: center;
-padding: 15px;
-background: rgba(255, 255, 255, 0.15);
-border-radius: 10px;
-border-left: 4px solid #4ecdc4;
-backdrop-filter: blur(5px);
+padding: 18px;
+background: rgba(236, 240, 241, 0.9);
+border-radius: 12px;
+border-left: 5px solid #e74c3c;
+transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+background: rgba(189, 195, 199, 0.9);
+transform: translateX(5px);
 }
 
 .schedule-time {
 font-weight: 600;
-color: #4ecdc4;
+color: #e74c3c;
 min-width: 120px;
-font-size: 1rem;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+font-size: 1.1rem;
 }
 
 .schedule-event {
 font-weight: 500;
-color: #ffffff;
-font-size: 1rem;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+color: #2c3e50;
+font-size: 1.1rem;
 }
 
 /* RSVP section with enhanced button */
@@ -231,63 +230,61 @@ text-align: center;
 
 .rsvp-button {
 display: inline-block;
-background: linear-gradient(135deg, #4ecdc4, #44a08d);
+background: linear-gradient(135deg, #e74c3c, #c0392b);
 color: white;
-padding: 18px 40px;
+padding: 20px 45px;
 text-decoration: none;
 border-radius: 50px;
-font-size: 1.2rem;
+font-size: 1.3rem;
 font-weight: 600;
-margin: 20px 0;
+margin: 25px 0;
 transition: all 0.3s ease;
 text-transform: uppercase;
 letter-spacing: 1px;
-box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
 }
 
 .rsvp-button:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 30px rgba(78, 205, 196, 0.5);
-background: linear-gradient(135deg, #44a08d, #4ecdc4);
+transform: translateY(-3px);
+box-shadow: 0 15px 35px rgba(231, 76, 60, 0.6);
+background: linear-gradient(135deg, #c0392b, #e74c3c);
 }
 
-/* Full width sections with enhanced transparency */
+/* Full width sections with improved styling */
 .full-width-section {
 margin-bottom: 30px;
-padding: 30px;
-background: rgba(255, 255, 255, 0.1);
+padding: 40px;
+background: rgba(255, 255, 255, 0.95);
 border-radius: 20px;
 backdrop-filter: blur(15px);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-border: 1px solid rgba(255, 255, 255, 0.3);
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .full-width-section h3 {
 font-family: 'Playfair Display', serif;
-font-size: 1.6rem;
-color: #ffffff;
-margin-bottom: 25px;
+font-size: 1.8rem;
+color: #2c3e50;
+margin-bottom: 30px;
 text-align: center;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .full-width-section p {
-color: #ffffff;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+color: #34495e;
+font-size: 1.1rem;
 }
 
 /* Flight booking section */
 .flight-controls {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 20px;
-margin-bottom: 25px;
+gap: 25px;
+margin-bottom: 30px;
 }
 
 .currency-selection {
 display: flex;
-gap: 20px;
+gap: 25px;
 justify-content: center;
 align-items: center;
 }
@@ -295,80 +292,77 @@ align-items: center;
 .currency-option {
 display: flex;
 align-items: center;
-gap: 8px;
+gap: 10px;
 font-weight: 600;
-color: #ffffff;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+color: #2c3e50;
+font-size: 1.1rem;
 }
 
 .currency-option input[type="radio"] {
 margin: 0;
-transform: scale(1.2);
+transform: scale(1.3);
+accent-color: #e74c3c;
 }
 
 .form-group {
-margin: 15px 0;
+margin: 18px 0;
 }
 
 .form-group label {
 display: block;
 font-weight: 600;
-margin-bottom: 8px;
-color: #ffffff;
-font-size: 0.95rem;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+margin-bottom: 10px;
+color: #2c3e50;
+font-size: 1rem;
 }
 
-/* Enhanced form elements with better readability */
+/* Enhanced form elements */
 .form-select, .form-input {
 width: 100%;
-padding: 12px;
-border: 2px solid rgba(255, 255, 255, 0.3);
-border-radius: 10px;
-font-size: 0.95rem;
+padding: 15px;
+border: 2px solid #bdc3c7;
+border-radius: 12px;
+font-size: 1rem;
 font-family: 'Source Sans Pro', sans-serif;
 transition: all 0.3s ease;
-background: rgba(255, 255, 255, 0.15);
-color: #333;
-backdrop-filter: blur(5px);
+background: white;
+color: #2c3e50;
 }
 
 .form-select:focus, .form-input:focus {
 outline: none;
-border-color: #4ecdc4;
-box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.3);
-background: rgba(255, 255, 255, 0.25);
+border-color: #e74c3c;
+box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
 }
 
 .flight-button {
-background: linear-gradient(135deg, #4ecdc4, #44a08d);
+background: linear-gradient(135deg, #e74c3c, #c0392b);
 color: white;
-padding: 15px 30px;
+padding: 18px 35px;
 border: none;
 border-radius: 50px;
-font-size: 1rem;
+font-size: 1.1rem;
 font-weight: 600;
 cursor: pointer;
 width: 100%;
-margin-top: 20px;
+margin-top: 25px;
 text-decoration: none;
 display: inline-block;
 text-align: center;
 transition: all 0.3s ease;
 text-transform: uppercase;
 letter-spacing: 1px;
-box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
 }
 
 .flight-button:hover:not(:disabled) {
 transform: translateY(-2px);
-box-shadow: 0 10px 30px rgba(78, 205, 196, 0.5);
-background: linear-gradient(135deg, #44a08d, #4ecdc4);
+box-shadow: 0 12px 30px rgba(231, 76, 60, 0.5);
+background: linear-gradient(135deg, #c0392b, #e74c3c);
 }
 
 .flight-button:disabled {
-background: linear-gradient(135deg, rgba(189, 195, 199, 0.8), rgba(149, 165, 166, 0.8));
+background: linear-gradient(135deg, #95a5a6, #7f8c8d);
 cursor: not-allowed;
 box-shadow: none;
 transform: none;
@@ -379,56 +373,55 @@ transform: none;
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: 1fr 1fr;
-gap: 20px;
-margin-top: 20px;
+gap: 25px;
+margin-top: 25px;
 }
 
 .hotel-card {
-padding: 20px;
-background: rgba(255, 255, 255, 0.15);
-border-radius: 15px;
-border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 25px;
+background: rgba(236, 240, 241, 0.9);
+border-radius: 18px;
+border: 2px solid rgba(149, 165, 166, 0.3);
 text-align: center;
 transition: all 0.3s ease;
-backdrop-filter: blur(10px);
 }
 
 .hotel-card:hover {
-transform: translateY(-3px);
-background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+transform: translateY(-5px);
+background: rgba(189, 195, 199, 0.9);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+border-color: #e74c3c;
 }
 
 .hotel-card h4 {
-color: #4ecdc4;
-margin-bottom: 10px;
-font-size: 1.1rem;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+color: #e74c3c;
+margin-bottom: 15px;
+font-size: 1.2rem;
+font-weight: 600;
 }
 
 .hotel-card h4 a {
-color: #4ecdc4;
+color: #e74c3c;
 text-decoration: none;
 transition: color 0.3s ease;
 }
 
 .hotel-card h4 a:hover {
-color: #45b7aa;
+color: #c0392b;
 text-decoration: underline;
 }
 
 .hotel-card p {
-font-size: 0.9rem;
-margin-bottom: 8px;
+font-size: 0.95rem;
+margin-bottom: 10px;
 text-align: left;
-color: #ffffff;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+color: #2c3e50;
+line-height: 1.5;
 }
 
 .hotel-distance {
 font-weight: 600;
-color: #4ecdc4;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+color: #e74c3c;
 }
 
 /* Enhanced responsive design */
@@ -438,11 +431,15 @@ background-attachment: scroll;
 }
 
 .main-header h1 {
-font-size: 2.2rem;
+font-size: 2.5rem;
 }
 
 .main-header .date {
-font-size: 1.3rem;
+font-size: 1.4rem;
+}
+
+.main-header {
+padding: 35px 25px;
 }
 
 .content-grid {
@@ -452,11 +449,11 @@ gap: 20px;
 
 .flight-controls {
 grid-template-columns: 1fr;
-gap: 15px;
+gap: 20px;
 }
 
 .currency-selection {
-gap: 15px;
+gap: 20px;
 }
 
 .container {
@@ -464,19 +461,14 @@ padding: 15px;
 }
 
 .section, .full-width-section {
-padding: 20px;
+padding: 25px;
 margin-bottom: 20px;
-}
-
-.main-header {
-padding: 30px 20px;
-margin-bottom: 30px;
 }
 
 .schedule-item {
 flex-direction: column;
 align-items: flex-start;
-gap: 5px;
+gap: 8px;
 }
 
 .schedule-time {
@@ -488,10 +480,9 @@ grid-template-columns: 1fr;
 grid-template-rows: auto;
 }
 
-/* Better spacing for mobile */
 .section h3, .full-width-section h3 {
-font-size: 1.4rem;
-margin-bottom: 15px;
+font-size: 1.5rem;
+margin-bottom: 20px;
 }
 }
 
@@ -522,20 +513,40 @@ position: relative;
 overflow: hidden;
 }
 
-.main-header::before, .section::before, .full-width-section::before {
+.main-header::before {
 content: '';
 position: absolute;
 top: 0;
 left: 0;
 right: 0;
-height: 1px;
-background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+height: 2px;
+background: linear-gradient(90deg, transparent, #e74c3c, transparent);
 }
 
-/* Improved text contrast for better readability */
+/* Improved text contrast and highlights */
 strong {
-color: #4ecdc4;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+color: #e74c3c;
+font-weight: 600;
+}
+
+@keyframes pulse {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.05); }
+}
+
+/* Special highlighting for important info */
+.highlight-info {
+background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(192, 57, 43, 0.1));
+border: 2px solid #e74c3c;
+border-radius: 15px;
+padding: 20px;
+margin: 20px 0;
+}
+
+.highlight-info p {
+color: #2c3e50 !important;
+font-weight: 600;
+margin-bottom: 0;
 }
 </style>
 </head>
@@ -586,7 +597,7 @@ text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 <div class="schedule-event">Dinner</div>
 </div>
 <div class="schedule-item">
-<div class="schedule-time">22:00 - onwards</div>
+<div class="schedule-time">from 22:00</div>
 <div class="schedule-event">Party</div>
 </div>
 </div>
@@ -655,12 +666,16 @@ text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 <!-- Recommended Hotels - Full Width -->
 <div class="full-width-section">
 <h3>🏨 Recommended Hotels</h3>
-<p style="text-align: center; margin-bottom: 15px; font-weight: 600; color: #4ecdc4;">🚗 Any hotel between Relais Villa Corallo and Alba Adriatica city will work perfectly!</p>
-<p style="text-align: center; margin-bottom: 25px; font-weight: 600; color: #4ecdc4;">Transportation from/to your hotel on the wedding day will be organised!</p>
-<p style="text-align: center; margin-bottom: 25px;">Stay close to the wedding venue for your convenience:</p>
+<div class="highlight-info">
+<p>🚗 Any hotel between Relais Villa Corallo and Alba Adriatica city will work perfectly!</p>
+</div>
+<div class="highlight-info">
+<p>🚌 Transportation from/to your hotel on the wedding day will be organised!</p>
+</div>
+<!-- <p style="text-align: center; margin-bottom: 25px;">Stay close to the wedding venue for your convenience:</p> -->
 <div class="hotels-grid">
 <div class="hotel-card">
-<h4><a href="https://www.booking.com/hotel/it/prova-nereto.html?ssne=Nereto&ssne_untouched=Nereto&highlighted_hotels=13005986&ss=Nereto&dest_id=13005986&dest_type=hotel&hp_avform=1&origin=hp&do_availability_check=1&label=en-de-booking-desktop-o*D5nB7NZNLuHtU0cv76EAS652804039175%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-46257546822%3Alp9042518%3Ali%3Adec%3Adm&sid=39fdaa8904401706bfc84b9bd3fdce59&aid=2336990&lang=en-gb&sb=1&src_elem=sb&src=hotel&checkin=2025-10-02&checkout=2025-10-04&group_adults=2&no_rooms=1&group_children=0#availability_target" target="_blank">Hotel Europa</a></h4>
+<h4><a href="https://www.booking.com/hotel/it/prova-nereto.html?ssne=Nereto&ssne_untouched=Nereto&highlighted_hotels=13005986&ss=Nereto&dest_id=13005986&dest_type=hotel&hp_avform=1&origin=hp&do_availability_check=1&label=en-de-booking-desktop-o*D5nB7NZNLuHtU0cv76EAS652804039175%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-46257546822%3Alp9042518%3Ali%3Adec%3Adm&sid=39fdaa8904401706bfc84b9bd3fdce59&aid=2336990&lang=en-gb&sb=1&src=hotel&checkin=2025-10-02&checkout=2025-10-04&group_adults=2&no_rooms=1&group_children=0#availability_target" target="_blank">Hotel Europa</a></h4>
 <p><strong>Distance:</strong> <span class="hotel-distance">5 minutes drive</span></p>
 <p><strong>Style:</strong> 2-star family hotel</p>
 <p><strong>Price range:</strong> €50-70/night</p>
@@ -703,8 +718,8 @@ function nextSlide() {
     slides[currentSlide].classList.add('active');
 }
 
-// Change slide every 7 seconds
-setInterval(nextSlide, 7000);
+// Change slide every 10 seconds
+setInterval(nextSlide, 10000);
 
 // Mapping of departure cities to recommended destinations
 const departureToDestination = {
