@@ -48,6 +48,7 @@ transition: opacity 2s ease-in-out;
 opacity: 1;
 }
 
+/* Reduced overlay opacity to show more of the background */
 .background-slide::before {
 content: '';
 position: absolute;
@@ -55,7 +56,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgba(0, 0, 0, 0.4);
+background: rgba(0, 0, 0, 0.15);
 z-index: 1;
 }
 
@@ -83,69 +84,75 @@ position: relative;
 z-index: 2;
 }
 
-/* Main header with all key info */
+/* Main header with enhanced transparency and readability */
 .main-header {
 text-align: center;
 margin-bottom: 40px;
 padding: 40px 30px;
-background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
-border-radius: 15px;
-backdrop-filter: blur(10px);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+background: rgba(255, 255, 255, 0.15);
+border-radius: 20px;
+backdrop-filter: blur(15px);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .main-header h1 {
 font-family: 'Playfair Display', serif;
 font-size: 3rem;
 font-weight: 700;
-color: #2c3e50;
+color: #ffffff;
 margin-bottom: 15px;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .main-header .date {
 font-family: 'Playfair Display', serif;
 font-size: 1.6rem;
-color: #7f8c8d;
+color: #ffffff;
 font-weight: 400;
 letter-spacing: 2px;
 margin-bottom: 20px;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .location-info {
 margin-top: 20px;
 padding-top: 20px;
-border-top: 2px solid rgba(39, 174, 96, 0.3);
+border-top: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .location-info h3 {
 font-family: 'Playfair Display', serif;
 font-size: 1.4rem;
-color: #27ae60;
+color: #ffffff;
 margin-bottom: 10px;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .location-info .venue-name {
 font-size: 1.2rem;
 font-weight: 600;
-color: #2c3e50;
+color: #ffffff;
 margin-bottom: 5px;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .location-info .address {
 font-size: 1rem;
-color: #555;
+color: #ffffff;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .location-info .address a {
-color: #27ae60;
+color: #4ecdc4;
 text-decoration: none;
 font-weight: 600;
 transition: color 0.3s ease;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .location-info .address a:hover {
-color: #229954;
+color: #45b7aa;
 text-decoration: underline;
 }
 
@@ -157,32 +164,35 @@ gap: 30px;
 margin-bottom: 30px;
 }
 
+/* Enhanced transparency for sections */
 .section {
 padding: 30px;
-background: rgba(255, 255, 255, 0.95);
-border-radius: 15px;
-backdrop-filter: blur(10px);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-border: 1px solid rgba(255, 255, 255, 0.2);
+background: rgba(255, 255, 255, 0.1);
+border-radius: 20px;
+backdrop-filter: blur(15px);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .section h3 {
 font-family: 'Playfair Display', serif;
 font-size: 1.6rem;
-color: #2c3e50;
+color: #ffffff;
 margin-bottom: 20px;
 text-align: center;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .section p {
 font-size: 1rem;
-color: #555;
+color: #ffffff;
 text-align: center;
-font-weight: 300;
+font-weight: 400;
 margin-bottom: 15px;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Schedule styling */
+/* Schedule styling with better contrast */
 .schedule-timeline {
 display: flex;
 flex-direction: column;
@@ -193,32 +203,35 @@ gap: 15px;
 display: flex;
 align-items: center;
 padding: 15px;
-background: rgba(39, 174, 96, 0.1);
+background: rgba(255, 255, 255, 0.15);
 border-radius: 10px;
-border-left: 4px solid #27ae60;
+border-left: 4px solid #4ecdc4;
+backdrop-filter: blur(5px);
 }
 
 .schedule-time {
 font-weight: 600;
-color: #27ae60;
+color: #4ecdc4;
 min-width: 120px;
 font-size: 1rem;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .schedule-event {
 font-weight: 500;
-color: #2c3e50;
+color: #ffffff;
 font-size: 1rem;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* RSVP section */
+/* RSVP section with enhanced button */
 .rsvp-section {
 text-align: center;
 }
 
 .rsvp-button {
 display: inline-block;
-background: linear-gradient(135deg, #27ae60, #2ecc71);
+background: linear-gradient(135deg, #4ecdc4, #44a08d);
 color: white;
 padding: 18px 40px;
 text-decoration: none;
@@ -229,32 +242,39 @@ margin: 20px 0;
 transition: all 0.3s ease;
 text-transform: uppercase;
 letter-spacing: 1px;
-box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .rsvp-button:hover {
 transform: translateY(-2px);
-box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
-background: linear-gradient(135deg, #229954, #27ae60);
+box-shadow: 0 10px 30px rgba(78, 205, 196, 0.5);
+background: linear-gradient(135deg, #44a08d, #4ecdc4);
 }
 
-/* Full width sections */
+/* Full width sections with enhanced transparency */
 .full-width-section {
 margin-bottom: 30px;
 padding: 30px;
-background: rgba(255, 255, 255, 0.95);
-border-radius: 15px;
-backdrop-filter: blur(10px);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-border: 1px solid rgba(255, 255, 255, 0.2);
+background: rgba(255, 255, 255, 0.1);
+border-radius: 20px;
+backdrop-filter: blur(15px);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .full-width-section h3 {
 font-family: 'Playfair Display', serif;
 font-size: 1.6rem;
-color: #2c3e50;
+color: #ffffff;
 margin-bottom: 25px;
 text-align: center;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.full-width-section p {
+color: #ffffff;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* Flight booking section */
@@ -277,7 +297,8 @@ display: flex;
 align-items: center;
 gap: 8px;
 font-weight: 600;
-color: #2c3e50;
+color: #ffffff;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .currency-option input[type="radio"] {
@@ -293,29 +314,34 @@ margin: 15px 0;
 display: block;
 font-weight: 600;
 margin-bottom: 8px;
-color: #2c3e50;
+color: #ffffff;
 font-size: 0.95rem;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
+/* Enhanced form elements with better readability */
 .form-select, .form-input {
 width: 100%;
 padding: 12px;
-border: 2px solid #ecf0f1;
-border-radius: 8px;
+border: 2px solid rgba(255, 255, 255, 0.3);
+border-radius: 10px;
 font-size: 0.95rem;
 font-family: 'Source Sans Pro', sans-serif;
-transition: border-color 0.3s ease;
-background: rgba(255, 255, 255, 0.9);
+transition: all 0.3s ease;
+background: rgba(255, 255, 255, 0.15);
+color: #333;
+backdrop-filter: blur(5px);
 }
 
 .form-select:focus, .form-input:focus {
 outline: none;
-border-color: #27ae60;
-box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+border-color: #4ecdc4;
+box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.3);
+background: rgba(255, 255, 255, 0.25);
 }
 
 .flight-button {
-background: linear-gradient(135deg, #27ae60, #2ecc71);
+background: linear-gradient(135deg, #4ecdc4, #44a08d);
 color: white;
 padding: 15px 30px;
 border: none;
@@ -331,23 +357,24 @@ text-align: center;
 transition: all 0.3s ease;
 text-transform: uppercase;
 letter-spacing: 1px;
-box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .flight-button:hover:not(:disabled) {
 transform: translateY(-2px);
-box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
-background: linear-gradient(135deg, #229954, #27ae60);
+box-shadow: 0 10px 30px rgba(78, 205, 196, 0.5);
+background: linear-gradient(135deg, #44a08d, #4ecdc4);
 }
 
 .flight-button:disabled {
-background: linear-gradient(135deg, #bdc3c7, #95a5a6);
+background: linear-gradient(135deg, rgba(189, 195, 199, 0.8), rgba(149, 165, 166, 0.8));
 cursor: not-allowed;
 box-shadow: none;
 transform: none;
 }
 
-/* Hotels section - 2x2 grid */
+/* Hotels section - 2x2 grid with enhanced styling */
 .hotels-grid {
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -358,31 +385,35 @@ margin-top: 20px;
 
 .hotel-card {
 padding: 20px;
-background: rgba(255, 255, 255, 0.7);
-border-radius: 10px;
-border: 1px solid rgba(39, 174, 96, 0.2);
+background: rgba(255, 255, 255, 0.15);
+border-radius: 15px;
+border: 1px solid rgba(255, 255, 255, 0.3);
 text-align: center;
-transition: transform 0.3s ease;
+transition: all 0.3s ease;
+backdrop-filter: blur(10px);
 }
 
 .hotel-card:hover {
-transform: translateY(-2px);
+transform: translateY(-3px);
+background: rgba(255, 255, 255, 0.2);
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .hotel-card h4 {
-color: #27ae60;
+color: #4ecdc4;
 margin-bottom: 10px;
 font-size: 1.1rem;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .hotel-card h4 a {
-color: #27ae60;
+color: #4ecdc4;
 text-decoration: none;
 transition: color 0.3s ease;
 }
 
 .hotel-card h4 a:hover {
-color: #229954;
+color: #45b7aa;
 text-decoration: underline;
 }
 
@@ -390,14 +421,17 @@ text-decoration: underline;
 font-size: 0.9rem;
 margin-bottom: 8px;
 text-align: left;
+color: #ffffff;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .hotel-distance {
 font-weight: 600;
-color: #2c3e50;
+color: #4ecdc4;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Mobile responsiveness */
+/* Enhanced responsive design */
 @media (max-width: 768px) {
 .background-slide {
 background-attachment: scroll;
@@ -431,10 +465,12 @@ padding: 15px;
 
 .section, .full-width-section {
 padding: 20px;
+margin-bottom: 20px;
 }
 
 .main-header {
 padding: 30px 20px;
+margin-bottom: 30px;
 }
 
 .schedule-item {
@@ -451,6 +487,12 @@ min-width: auto;
 grid-template-columns: 1fr;
 grid-template-rows: auto;
 }
+
+/* Better spacing for mobile */
+.section h3, .full-width-section h3 {
+font-size: 1.4rem;
+margin-bottom: 15px;
+}
 }
 
 /* Smooth scrolling */
@@ -458,20 +500,42 @@ html {
 scroll-behavior: smooth;
 }
 
-/* Animation for sections */
+/* Enhanced animation for sections */
 .section, .full-width-section {
-animation: fadeIn 0.8s ease-in;
+animation: fadeInUp 0.8s ease-out;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInUp {
 from {
 opacity: 0;
-transform: translateY(30px);
+transform: translateY(40px);
 }
 to {
 opacity: 1;
 transform: translateY(0);
 }
+}
+
+/* Additional visual enhancements */
+.main-header, .section, .full-width-section {
+position: relative;
+overflow: hidden;
+}
+
+.main-header::before, .section::before, .full-width-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 1px;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+/* Improved text contrast for better readability */
+strong {
+color: #4ecdc4;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 </style>
 </head>
@@ -544,8 +608,6 @@ transform: translateY(0);
 </div>
 </div>
 </div>
-<p style="margin-bottom: 15px; text-align: center; font-weight: 600; color: #27ae60;">✈️ Transportation from Rome/Ancona/Pescara airports will be organised!</p>
-<p style="margin-bottom: 25px; text-align: center;">Find flights for your trip to our wedding:</p>
 <div class="flight-controls">
 <div class="form-group">
 <label for="departure-city">Departure:</label>
@@ -593,8 +655,8 @@ transform: translateY(0);
 <!-- Recommended Hotels - Full Width -->
 <div class="full-width-section">
 <h3>🏨 Recommended Hotels</h3>
-<p style="text-align: center; margin-bottom: 15px; font-weight: 600; color: #27ae60;">🚗 Any hotel between Relais Villa Corallo and Alba Adriatica city will work perfectly!</p>
-<p style="text-align: center; margin-bottom: 25px; font-weight: 600; color: #27ae60;">Transportation from/to your hotel on the wedding day will be organised!</p>
+<p style="text-align: center; margin-bottom: 15px; font-weight: 600; color: #4ecdc4;">🚗 Any hotel between Relais Villa Corallo and Alba Adriatica city will work perfectly!</p>
+<p style="text-align: center; margin-bottom: 25px; font-weight: 600; color: #4ecdc4;">Transportation from/to your hotel on the wedding day will be organised!</p>
 <p style="text-align: center; margin-bottom: 25px;">Stay close to the wedding venue for your convenience:</p>
 <div class="hotels-grid">
 <div class="hotel-card">
@@ -605,7 +667,7 @@ transform: translateY(0);
 <p><strong>Address:</strong> Viale Europa SNC, 64015 Nereto, Italy</p>
 </div>
 <div class="hotel-card">
-<h4><a href="https://www.booking.com/hotel/it/villa-luigi.de.html?label=en-de-booking-desktop-o*D5nB7NZNLuHtU0cv76EAS652804039175%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-46257546822%3Alp9042518%3Ali%3Adec%3Adm&sid=bda34adc2803e4ae9673ed09f19ab374&aid=2336990&ucfs=1&checkin=2025-10-02&checkout=2025-10-04&dest_id=-122995&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204%3Boos%3D1&srpvid=fc8a76e265180014&srepoch=1749661053&matching_block_id=30918601_213281883_2_41_0&atlas_src=sr_iw_title#map_closed" target="_blank">Villa Luigi Hotel & Restaurant Nuova gestione</a></h4>
+<h4><a href="https://www.booking.com/hotel/it/villa-luigi.de.html?label=en-de-booking-desktop-o*D5nB7NZNLuHtU0cv76EAS652804039175%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-46257546822%3Alp9042518%3Ali%3Adec%3Adm&sid=bda34adc2803e4ae9673ed09f19ab374&aid=2336990&ucfs=1&checkin=2025-10-02&checkout=2025-10-04&dest_id=-122995&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204%3Boos%3D1&srpvid=fc8a76e265180014&srepoch=1749661053&matching_block_id=30918601_213281883_2_41_0&atlas_src=sr_iw_title#map_closed" target="_blank">Villa Luigi Hotel & Restaurant</a></h4>
 <p><strong>Distance:</strong> <span class="hotel-distance">15 minutes drive</span></p>
 <p><strong>Style:</strong> 3-star hotel</p>
 <p><strong>Price range:</strong> €90-110/night</p>
@@ -626,9 +688,6 @@ transform: translateY(0);
 <p><strong>Address:</strong> Lungomare Sirena 30, Tortoreto Lido</p>
 </div>
 </div>
-<p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #666;">
-<em>We recommend booking early, especially for weekend stays. Contact hotels directly for best rates and availability.</em>
-</p>
 </div>
 </div>
 
