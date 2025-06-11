@@ -347,10 +347,11 @@ box-shadow: none;
 transform: none;
 }
 
-/* Hotels section */
+/* Hotels section - 2x2 grid */
 .hotels-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
 gap: 20px;
 margin-top: 20px;
 }
@@ -372,6 +373,17 @@ transform: translateY(-2px);
 color: #27ae60;
 margin-bottom: 10px;
 font-size: 1.1rem;
+}
+
+.hotel-card h4 a {
+color: #27ae60;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.hotel-card h4 a:hover {
+color: #229954;
+text-decoration: underline;
 }
 
 .hotel-card p {
@@ -437,6 +449,7 @@ min-width: auto;
 
 .hotels-grid {
 grid-template-columns: 1fr;
+grid-template-rows: auto;
 }
 }
 
@@ -488,7 +501,7 @@ transform: translateY(0);
 <!-- RSVP Section -->
 <div class="section rsvp-section">
 <h3>💌 RSVP</h3>
-<p style="font-size: 1.2rem; font-weight: 500;">Please confirm your attendance by <strong>June 30, 2025</strong></p>
+<p style="font-size: 1.2rem; font-weight: 500;">Please confirm your attendance by <strong>July 15, 2025</strong></p>
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1Qgdw5U7qWkNvp9w9jKqb0saRPPX8xqFEn6nCr9DxsMHT3A/viewform?usp=sharing&ouid=103120049794929548224" class="rsvp-button" target="_blank">RSVP Now</a>
 </div>
 
@@ -531,6 +544,7 @@ transform: translateY(0);
 </div>
 </div>
 </div>
+<p style="margin-bottom: 15px; text-align: center; font-weight: 600; color: #27ae60;">✈️ Transportation from Rome/Ancona/Pescara airports will be organised!</p>
 <p style="margin-bottom: 25px; text-align: center;">Find flights for your trip to our wedding:</p>
 <div class="flight-controls">
 <div class="form-group">
@@ -579,35 +593,37 @@ transform: translateY(0);
 <!-- Recommended Hotels - Full Width -->
 <div class="full-width-section">
 <h3>🏨 Recommended Hotels</h3>
+<p style="text-align: center; margin-bottom: 15px; font-weight: 600; color: #27ae60;">🚗 Any hotel between Relais Villa Corallo and Alba Adriatica city will work perfectly!</p>
+<p style="text-align: center; margin-bottom: 25px; font-weight: 600; color: #27ae60;">Transportation from/to your hotel on the wedding day will be organised!</p>
 <p style="text-align: center; margin-bottom: 25px;">Stay close to the wedding venue for your convenience:</p>
 <div class="hotels-grid">
 <div class="hotel-card">
-<h4>Hotel Villa Picena</h4>
+<h4><a href="https://www.booking.com/hotel/it/prova-nereto.html?ssne=Nereto&ssne_untouched=Nereto&highlighted_hotels=13005986&ss=Nereto&dest_id=13005986&dest_type=hotel&hp_avform=1&origin=hp&do_availability_check=1&label=en-de-booking-desktop-o*D5nB7NZNLuHtU0cv76EAS652804039175%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-46257546822%3Alp9042518%3Ali%3Adec%3Adm&sid=39fdaa8904401706bfc84b9bd3fdce59&aid=2336990&lang=en-gb&sb=1&src_elem=sb&src=hotel&checkin=2025-10-02&checkout=2025-10-04&group_adults=2&no_rooms=1&group_children=0#availability_target" target="_blank">Hotel Europa</a></h4>
 <p><strong>Distance:</strong> <span class="hotel-distance">5 minutes drive</span></p>
-<p><strong>Style:</strong> Boutique hotel with garden</p>
-<p><strong>Price range:</strong> €80-120/night</p>
-<p><strong>Contact:</strong> +39 0861 84731</p>
+<p><strong>Style:</strong> 2-star family hotel</p>
+<p><strong>Price range:</strong> €50-70/night</p>
+<p><strong>Address:</strong> Viale Europa SNC, 64015 Nereto, Italy</p>
 </div>
 <div class="hotel-card">
-<h4>Agriturismo Le Vigne</h4>
-<p><strong>Distance:</strong> <span class="hotel-distance">8 minutes drive</span></p>
-<p><strong>Style:</strong> Countryside farmhouse</p>
-<p><strong>Price range:</strong> €60-90/night</p>
-<p><strong>Contact:</strong> +39 0861 88425</p>
-</div>
-<div class="hotel-card">
-<h4>B&B Casa Abruzzo</h4>
-<p><strong>Distance:</strong> <span class="hotel-distance">10 minutes drive</span></p>
-<p><strong>Style:</strong> Traditional bed & breakfast</p>
-<p><strong>Price range:</strong> €50-75/night</p>
-<p><strong>Contact:</strong> +39 0861 87392</p>
-</div>
-<div class="hotel-card">
-<h4>Hotel Duca d'Aosta</h4>
+<h4><a href="https://www.booking.com/hotel/it/villa-luigi.de.html?label=en-de-booking-desktop-o*D5nB7NZNLuHtU0cv76EAS652804039175%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-46257546822%3Alp9042518%3Ali%3Adec%3Adm&sid=bda34adc2803e4ae9673ed09f19ab374&aid=2336990&ucfs=1&checkin=2025-10-02&checkout=2025-10-04&dest_id=-122995&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204%3Boos%3D1&srpvid=fc8a76e265180014&srepoch=1749661053&matching_block_id=30918601_213281883_2_41_0&atlas_src=sr_iw_title#map_closed" target="_blank">Villa Luigi Hotel & Restaurant Nuova gestione</a></h4>
 <p><strong>Distance:</strong> <span class="hotel-distance">15 minutes drive</span></p>
-<p><strong>Style:</strong> City center hotel in Teramo</p>
-<p><strong>Price range:</strong> €70-110/night</p>
-<p><strong>Contact:</strong> +39 0861 244237</p>
+<p><strong>Style:</strong> 3-star hotel</p>
+<p><strong>Price range:</strong> €90-110/night</p>
+<p><strong>Address:</strong>Via Casone, 64014 Martinsicuro, Italien</p>
+</div>
+<div class="hotel-card">
+<h4><a href="https://www.booking.com/hotel/it/youmami-suite.de.html?label=en-de-booking-desktop-o*D5nB7NZNLuHtU0cv76EAS652804039175%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-46257546822%3Alp9042518%3Ali%3Adec%3Adm&sid=bda34adc2803e4ae9673ed09f19ab374&aid=2336990&ucfs=1&checkin=2025-10-02&checkout=2025-10-04&dest_id=-122995&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204%3Boos%3D1&srpvid=fc8a76e265180014&srepoch=1749660926&matching_block_id=505251202_355311897_2_2_0&atlas_src=sr_iw_title" target="_blank">YouMami Suite Hotel</a></h4>
+<p><strong>Distance:</strong> <span class="hotel-distance">12 minutes drive</span></p>
+<p><strong>Style:</strong> 4-star suite hotel with spa & pool</p>
+<p><strong>Price range:</strong> €100-120/night</p>
+<p><strong>Address:</strong> Via Dè Bartolomei, Giulianova</p>
+</div>
+<div class="hotel-card">
+<h4><a href="https://www.booking.com/hotel/it/continental-tortoreto.de.html?label=en-de-booking-desktop-o*D5nB7NZNLuHtU0cv76EAS652804039175%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-46257546822%3Alp9042518%3Ali%3Adec%3Adm&sid=bda34adc2803e4ae9673ed09f19ab374&aid=2336990&ucfs=1&checkin=2025-10-02&checkout=2025-10-04&dest_id=-122995&dest_type=city&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204%3Boos%3D1&srpvid=fc8a76e265180014&srepoch=1749661007&matching_block_id=134226904_241274274_0_41_0&atlas_src=sr_iw_title" target="_blank">Hotel Continental</a></h4>
+<p><strong>Distance:</strong> <span class="hotel-distance">15 minutes drive</span></p>
+<p><strong>Style:</strong> 3-star beachfront hotel</p>
+<p><strong>Price range:</strong> €200-250/night</p>
+<p><strong>Address:</strong> Lungomare Sirena 30, Tortoreto Lido</p>
 </div>
 </div>
 <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #666;">
